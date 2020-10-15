@@ -10,8 +10,23 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+h1 {
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(#ff9500, #ff5e3a);
+}
+
+h2 {
+  color: #fff;
 }
