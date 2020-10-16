@@ -21,15 +21,27 @@ html {
 
 h1 {
   color: #fff;
+  text-align: center;
+  grid-area: header;
 }
 
 body {
   background-image: linear-gradient(#ff9500, #ff5e3a);
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "card1" "card2" "card3";
+  gap: 6vmin;
+}
+
+.bubbles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
   color: #fff;
+  text-align: center;
 }
 
 .icon svg {
@@ -45,4 +57,26 @@ a {
   text-decoration: none;
   border: .2rem solid #fff;
   padding: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  h1,
+  p {
+    margin: 0 0 1.4rem;
+  }
+
+  body {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header header"
+      "card1" "card2" "card3";
+  }
+
 }
