@@ -25,8 +25,24 @@ h1 {
 
 body {
   background-image: linear-gradient(#ff9500, #ff5e3a);
+  display: grid;
 }
 
 h2 {
   color: #fff;
+}
+
+.icon svg {
+  fill: currentColor;
+}
+
+p {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border: .2rem solid #fff;
+  padding: 1rem;
 }
