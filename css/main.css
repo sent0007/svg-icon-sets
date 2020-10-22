@@ -19,19 +19,28 @@ html {
 
 h1 {
   color: #fff;
-  margin-bottom: .5rem;
+  margin-top: 1.5rem;
+  grid-area: header;
+  margin-left: 1.5rem;
+  margin-bottom: 0;
 }
 
 body {
   background-image: linear-gradient(#ff9500, #ff5e3a);
   background-repeat: no-repeat;
   height: 100%;
-  margin: 1.5rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "card1" "card2" "card3";
+  gap: 6vmin;
+  justify-content: center;
 }
 
 .bubbles {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -43,24 +52,50 @@ h2 {
 
 .icon svg {
   fill: currentColor;
+  display: block;
+  margin: 0 auto;
 }
 
 p {
   color: #fff;
   font-weight: lighter;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 h3 {
+  margin-bottom: 0;
+}
+
+.section3 h3 {
   margin-bottom: 1.5rem;
 }
 
 a {
   color: #fff;
+  font-weight: 400;
   text-decoration: none;
   border: .2rem solid #fff;
   padding: 1rem;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: purple;
+}
+
+.section1 {
+  grid-area: card1;
+}
+
+.section2 {
+  grid-area: card2;
+}
+
+.section3 {
+  grid-area: card3;
 }
 
 @media only screen and (min-width: 38em) {
@@ -75,5 +110,25 @@ a {
     margin: 0 0 1.4rem;
   }
 
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "card1 card2 card3";
+    gap: 6vmin;
+    margin: 1.5rem;
+  }
+
+  .section3 h3 {
+    margin-bottom: 0;
+
+  }
 
 }
